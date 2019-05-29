@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>卡尺</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="operation-card">
+      <h3 class="title">色谱设置 <i class="icon-direction"></i></h3>
+      <div class="type item">
+        <h4><span class="icon"></span>数值样式</h4>
+        <input checked type="radio" name="type" value="0" id="calipersStyle" />
+        <label for="calipersStyle">卡尺式</label>
+        <input type="radio" name="type" value="1" id="centerStyle" />
+        <label for="centerStyle">居中式</label>
+      </div>
+
+      <div class="style item">
+        <h4><span class="icon"></span>排列样式</h4>
+        <div class="direction-warp">
+          <input checked type="radio" name="style" value="0" id="row" />
+          <label class="active" for="row">横排</label>
+
+          <div class="direction">
+            数值在 <span id="rowLeft">左</span
+            ><span class="button" id="rowRight">右</span>
+          </div>
+        </div>
+
+        <div class="direction-warp">
+          <input type="radio" name="style" value="0" id="col" />
+          <label for="col">竖排</label>
+
+          <div class="direction">
+            数值在 <span class="button" id="colTop">上</span
+            ><span class="" id="colBottom">下</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="width-height item">
+        <h4 style="display:block;"><span class="icon"></span>单色块的长宽</h4>
+        <label for="width">长</label>
+        <input type="text" value="40px" name="" id="width" />
+        <label for="height">宽</label>
+        <input type="text" value="60px" name="" id="height" />
+      </div>
+    </div>
+
+    <div id="card">
+      <p class="tip">单位：mm</p>
+      <div class="card-warp">
+        <span><p>50</p></span><span><p>40</p></span><span><p>15</p></span
+        ><span><p>7</p></span><span><p>1.6</p></span><span><p>0.1</p></span
+        ><span><p>0</p></span>
+      </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

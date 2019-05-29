@@ -1,0 +1,177 @@
+html,
+body {
+  color: #656565;
+  font-family: arial;
+  font-size: 12px;
+  background-color: #f2f2f2;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+input[type="radio"]::-webkit-input-placeholder {
+  color: #38a7f0;
+}
+input[type="radio"]::-moz-placeholder {
+  color: #38a7f0;
+}
+input[type="radio"]:-ms-input-placeholder {
+  color: #38a7f0;
+}
+input[type="radio"] {
+  border: 1px solid #38a7f0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+input[type="radio"]:checked {
+  border: 1px solid #38a7f0;
+  background-color: #38a7f0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.operation-card {
+  background-color: #f8feff;
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  width: 265px;
+  padding-bottom: 10px;
+  /* height: 217px; */
+}
+.operation-card div,
+input[type="radio"] {
+  cursor: pointer;
+}
+.operation-card .title {
+  position: relative;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  width: 72px;
+  background-color: #38a7f0;
+  color: #fff;
+}
+.operation-card .title .icon-direction {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -12px;
+  border: 6px solid transparent;
+  border-left: 6px solid #38a7f0;
+}
+.operation-card .item {
+  margin-top: 10px;
+  margin-left: 10px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+}
+.operation-card .item:last-child {
+  border-bottom: 0;
+}
+.operation-card .item h4 {
+  display: inline-block;
+  font-size: 14px;
+}
+.operation-card .item input {
+  margin-left: 25px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+.operation-card .icon {
+  display: inline-block;
+  width: 3px;
+  height: 12px;
+  background-color: #f89751;
+  margin-right: 10px;
+}
+.operation-card .direction-warp {
+  margin-top: 10px;
+}
+.operation-card .direction {
+  display: inline-block;
+  margin-left: 25px;
+}
+.operation-card .direction span {
+  background-color: #38a7f0;
+  display: inline-block;
+  padding: 2px;
+}
+.operation-card .width-height h4 {
+  margin-bottom: 10px;
+}
+.operation-card .width-height input {
+  width: 37px;
+  height: 20px;
+  margin: 0;
+}
+
+#card {
+  margin-left: 100px;
+  margin-top: 100px;
+  /* position: relative; */
+}
+#card .tip {
+  margin: 40px;
+  margin-left: 0;
+}
+
+.button {
+  display: inline-block;
+  background-color: #38a7f0;
+  color: #fff;
+  cursor: pointer;
+}
+
+#card .card-warp span {
+  /* display: inline-block; */
+  display: block;
+  width: 40px;
+  height: 60px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin: 0;
+  /* font-size: 0; */
+  position: relative;
+}
+
+#card .card-warp span p {
+  height: 12px;
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+  color: #000;
+  font-size: 12px;
+}
+#card .card-warp {
+  display: inline-block;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  margin: 0;
+  /* font-size: 0; */
+}
+#card .card-warp span:nth-of-type(1) {
+  background-color: #810042;
+}
+#card .card-warp span:nth-of-type(2) {
+  background-color: #f304ed;
+}
+#card .card-warp span:nth-of-type(3) {
+  background-color: #0000ff;
+}
+#card .card-warp span:nth-of-type(4) {
+  background-color: #61b8ff;
+}
+#card .card-warp span:nth-of-type(5) {
+  background-color: #3dba3d;
+}
+#card .card-warp span:nth-of-type(6) {
+  background-color: #a6f28f;
+}
+#card .card-warp span:nth-of-type(7) {
+  background-color: #fff;
+}

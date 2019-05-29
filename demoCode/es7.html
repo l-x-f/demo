@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>es7</title>
+    <style>
+        .box {
+            display: inline-grid;
+            grid-template-rows: 60px 40px;
+            rid-template-columns: 40px 50px 60px;
+
+        }
+
+        .item {
+            display: inline-block;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+
+    <div class="item">项目列表</div>
+    <div class="item">项目列表</div>
+    <div class="item">项目列表</div>
+    <div class="item">项目列表</div>
+    <div class="item">项目列表</div>
+
+</div>
+
+
+<!--<script>-->
+<!--let fun1 = function () {-->
+<!--console.log(1);-->
+<!--console.log(0);-->
+<!--return '我是第一个函数';-->
+
+<!--};-->
+<!--let fun2 = function () {-->
+<!--console.log(2);-->
+<!--return '我是第二个函数';-->
+
+<!--};-->
+
+<!--async function demo() {-->
+<!--const result1 = await fun1();-->
+<!--console.log(result1);-->
+<!--const result2 = await fun2();-->
+<!--console.log(result2);-->
+<!--};-->
+<!--demo().then(-->
+<!--res => {-->
+<!--console.log(res);-->
+<!--}-->
+<!--).then(res => {-->
+<!--console.log(res);-->
+<!--}).catch(err => {-->
+<!--console.log(err);-->
+<!--})-->
+
+<!--const a = {};-->
+<!--Object.defineProperty(a, 'a', {-->
+<!--set: (val) => {-->
+<!--return `${val}aaa`-->
+
+<!--},-->
+<!--get: (val) => {-->
+<!--return val-->
+
+
+<!--},-->
+
+<!--})-->
+<!--a.a = 100-->
+<!--console.log(a.a, 'aaaa');-->
+<!--//    字符串遍历-->
+<!--const str = 'abcdefg';-->
+<!--for (var i = 0; i < str.length; i++) {-->
+<!--var arr = str[i];-->
+<!--console.log(arr);-->
+
+<!--}-->
+<!--//字符串检测方法includes()：返回布尔值，表示是否找到了参数字符串。-->
+<!--// startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。-->
+<!--// endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。-->
+<!--console.log('-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;');-->
+<!--console.log(str.includes('b'));-->
+<!--console.log(str.charAt(2));-->
+<!--console.log(str.indexOf('b'));-->
+<!--console.log(str.lastIndexOf('b'));-->
+<!--console.log(str.startsWith('a'));-->
+<!--console.log(str.endsWith('g'));-->
+<!--let str1 = 'x'.repeat(3) // "xxx"-->
+<!--console.log(str1);-->
+<!--let array = ['a', 'b', 'c'];-->
+<!--console.log(array.includes('a'), 'arrayIncludes')-->
+<!--console.log('-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;');-->
+<!--for (let k of str) {-->
+<!--console.log(k, 'k');-->
+
+<!--}-->
+<!--let obj = {-->
+<!--value: 'haha',-->
+<!--age: '16'-->
+<!--}-->
+
+<!--console.log(obj.hasOwnProperty(''), 'obj');-->
+<!--for (var k in obj) {-->
+<!--if (obj.hasOwnProperty(k)) {-->
+<!--alert(obj[k])-->
+<!--}-->
+
+<!--}-->
+<!--</script>-->
+</body>
+</html>

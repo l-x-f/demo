@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style>
+        body, span div, p {
+            padding: 0;
+            margin: 0;
+        }
+        .warpper {
+            position: relative;
+            height: 80px;
+            width: 200px;
+            height: 80px;
+            margin: 100px auto;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .warp {
+            width: 200px;
+            height: 80px;
+            overflow: hidden;
+        }
+
+        .content {
+            transition: transform .6s ease;
+            height: 100px;
+            line-height: 80px;
+            color: #fff;
+
+        }
+
+        .content-hover {
+            transition: transform .6s ease;
+            transform: translateY(-100px);
+
+        }
+
+        .content-color {
+            color: red;
+        }
+
+        .line-top {
+            width: 140px;
+            border-top: 2px solid green;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: width .1s ease;
+        }
+
+        .line-top-hover {
+            width: 0;
+            transition: width .1s ease;
+        }
+
+        .line-right {
+            height: 80px;
+            border-right: 2px solid red;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transition: width .1s ease;
+        }
+
+        .line-right-hover {
+            width: 0;
+            transition: width .1s ease;
+        }
+
+        .line-bottom {
+            width: 60px;
+            border-bottom: 2px solid orange;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition: width .1s ease;
+        }
+
+        .line-bottom-hover {
+            width: 200px;
+            transition: width .1s ease;
+        }
+
+        .line-left {
+            height: 0;
+            border-left: 2px solid darkcyan;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width .2s ease;
+        }
+
+        .line-left-hover {
+            height: 80px;
+            transition: width .2s ease;
+        }
+
+        .line-top-left {
+            width: 0;
+            border-top: 2px solid lawngreen;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width .2s ease;
+        }
+
+        .line-top-left-hover {
+            width: 60px;
+            transition: width .2s ease;
+        }
+    </style>
+</head>
+<body>
+<div class='warpper'>
+    <!--内容-->
+    <div class='warp'>
+        <p class='content'>
+            加入我们
+        </p>
+        <p class='content'>
+            加入我们
+        </p>
+    </div>
+    <!--线条-->
+    <div class='line-top'></div>
+    <div class='line-right'></div>
+    <div class='line-bottom'></div>
+    <div class='line-left'></div>
+    <div class='line-top-left'></div>
+
+
+</div>
+
+
+<script>
+    // 获取dom
+    let warp = document.querySelector('.warp');
+    let content = document.querySelector('.content');
+    let lineTop = document.querySelector('.line-top');
+    let lineRight = document.querySelector('.line-right');
+    let lineBottom = document.querySelector('.line-bottom');
+    let lineLeft = document.querySelector('.line-left');
+    let lineTopLeft = document.querySelector('.line-top-left');
+    //添加鼠标滑过事件
+    warp.onmouseover = function (e) {
+        //伪数组转成数组遍历;
+        Array.prototype.slice.call(warp.children).forEach((value, index) => {
+            value.className = 'content content-hover '
+            if (index == Array.prototype.slice.call(warp.children).length - 1) {
+                value.className = 'content content-hover content-color '
+            }
+
+        });
+        lineTop.className = 'line-top line-top-hover';
+        //添加延时，可以用jquery回调
+        setTimeout(() => {
+            lineRight.className = 'line-top line-right-hover';
+        }, 100);
+        setTimeout(() => {
+            lineBottom.className = 'line-bottom line-bottom-hover';
+        }, 200);
+        setTimeout(() => {
+            lineLeft.className = 'line-left line-left-hover';
+        }, 300);
+        setTimeout(() => {
+            lineTopLeft.className = 'line-top-left line-top-left-hover';
+        }, 400)
+
+
+    };
+    //添加鼠标离开事件
+    warp.onmouseleave = function (e) {
+        //伪数组转成数组遍历
+        Array.prototype.slice.call(warp.children).forEach((value, index) => {
+            value.className = 'content'
+        });
+        //添加延时，可以用jquery回调
+        lineTopLeft.className = 'line-top-left ';
+        setTimeout(() => {
+            lineLeft.className = 'line-left ';
+        }, 100);
+        setTimeout(() => {
+            lineBottom.className = 'line-bottom ';
+        }, 200);
+        setTimeout(() => {
+            lineRight.className = 'line-right';
+        }, 300);
+
+        setTimeout(() => {
+            lineTop.className = 'line-top';
+        }, 400)
+
+
+    }
+
+</script>
+
+
+</body>
+</html>
