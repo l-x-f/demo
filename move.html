@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style lang="scss" scoped>
+        #container {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        #container #warpper {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            list-style: none;
+            height: 200px;
+            width: 200%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #container #warpper .item {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            flex-basis: 50%;
+            flex-shrink: 0;
+            height: 200px;
+        }
+
+        #container #warpper li:nth-of-type(1) {
+            background-color: red
+        }
+
+        #container #warpper li:nth-of-type(2) {
+            background-color: greenyellow
+        }
+
+        #container #warpper li:nth-of-type(3) {
+            background-color: skyblue
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <ul id="warpper">
+            <li class="item"></li>
+            <li class="item"></li>
+            <li class="item"></li>
+        </ul>
+    </div>
+    <script>
+        const warpper = document.querySelector("#warpper")
+        let warpperLeft = 0
+        setInterval(() => {
+            const offsetWidth = warpper.offsetWidth
+            const left = Math.abs(parseInt(warpper.style.left))
+            if (offsetWidth > left) {
+                warpper.style.left = warpperLeft-- + 'px'
+            } else {
+                warpper.style.left = 0
+                warpperLeft = 0
+            }
+        }, 15)
+    </script>
+</body>
+
+</html>
